@@ -29,6 +29,8 @@ services:
       - COMPOSER_AUTH=${COMPOSER_AUTH}
       - COMPOSER_HOME=/.composer
       - XDG_CONFIG_HOME=/tmp/.config
+    extra_hosts:
+      - host.docker.internal:host-gateway
     depends_on:
       - db
       - redis
