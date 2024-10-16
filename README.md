@@ -6,11 +6,13 @@ A docker compose setup for local development.
 
 1. Run `setup.sh` to create a `.env` file
 2. `docker compose run php create-project laravel/laravel .`
+3. `docker compose up -d`
+4. `docker compose exec php bash`
+5. `php artisan show`
 
-`.env` configuration
+### Sample configuration
 
 DB
-
 ```
 DB_CONNECTION=pgsql
 DB_HOST=db
@@ -28,6 +30,7 @@ REDIS_PASSWORD=null
 REDIS_PORT=6379
 ```
 
+Mail
 ```
 MAIL_MAILER=smtp
 MAIL_HOST=mail
